@@ -1,6 +1,6 @@
 ###
- # # POWN eventing system - now in CoffeeScript!
- # ### A 100 SLOC mangling of the <s>JavaScript</s> eventing system
+ # POWN eventing system - now in CoffeeScript!
+ # A 100 SLOC mangling of the <s>JavaScript</s> eventing system
  #
  # `pown` your objects using `obj.prototype = Object.create pown`
  # That's right - don't even worry about your constructor - that's
