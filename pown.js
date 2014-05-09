@@ -66,7 +66,7 @@ define(function () {
     var l = list.length;
 
     for (var i = 0; i < l; i++) {
-      var listener = list[event][i];
+      var listener = list[i];
       listener.callback.apply(listener.context, [this].concat(options));
     }
 
