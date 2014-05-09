@@ -26,7 +26,7 @@ define(function () {
       context: context || this
     };
     var events = this._events || (this._events = {});
-    (events[event] || events[event] = []).push(listener);
+    (events[event] || (events[event] = [])).push(listener);
 
     return this;
   };
