@@ -1,4 +1,4 @@
-/**
+/**(c) 2014 Zach Pomerantz; github.com/zzmp/pown
  * # POWN eventing system
  * ### A 100 SLOC mangling of the JavaScript eventing system
  *
