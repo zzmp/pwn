@@ -59,12 +59,13 @@ define(function () {
     return this;
   };
 
-  pown.trigger = function (event, options) {
+  pown.trigger = function (event) {
     if (!this._events || !this._events[event]) return this;
 
     var list = this._events[event];
     var l = list.length;
 
+    var options = Array.prototype.slice.call(arguments, 1);
     for (var i = 0; i < l; i++) {
       var listener = list[i];
       listener.callback.apply(listener.context, [this].concat(options));
@@ -96,5 +97,4 @@ define(function () {
 
   return pown;
 });
-
 // 100 SLOC                           - *powned* (MIT License)
