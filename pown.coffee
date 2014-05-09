@@ -53,10 +53,8 @@ define ->
     return @ if not this@_events or not @_events[event]
 
     list = @_events[event]
-    l = list.length
-
     
-    for listener in [0...l]
+    for listener in list.slice()
       listener.callback.apply listener.context, [@].concat options
 
     return @
@@ -81,4 +79,4 @@ define ->
 
   return pown
 
-# 84 SLOC                            - *powned* (MIT License)
+# 82 SLOC                            - *powned* (MIT License)
