@@ -49,7 +49,7 @@ define ->
 
     return @
 
-  pown.trigger = (event, options) ->
+  pown.trigger = (event, options...) ->
     return @ if not this@_events or not @_events[event]
 
     list = @_events[event]
