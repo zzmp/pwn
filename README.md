@@ -36,7 +36,7 @@ obj.off(); // remove all registered listeners to all events
 ```javascript
 // obj.set(property, value)
 
-obj.set('frequency', 440)
+obj.set('frequency', 440) // returns 440
 /**
  * Triggers callbacks registered to 'change'
  * as callback(obj, {
@@ -68,7 +68,7 @@ obj.trigger('change', 'p', 'o', 'w', 'n', 'e', 'd');
  */
 ```
 
-*They're even chainable!*
+*They're even chainable (`on`, `off`, and `trigger`)!*
 
 ---
 

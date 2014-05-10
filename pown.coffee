@@ -1,19 +1,19 @@
-###
+### (c) 2014 Zach Pomerantz; github.com/zzmp/pown
  # POWN eventing system - now in CoffeeScript!
- # A 100 SLOC mangling of the <s>JavaScript</s> eventing system
- #
- # `pown` your objects using `obj.prototype = Object.create pown`
- # That's right - don't even worry about your constructor - that's
- # some pseudo-classical garbage. You *powned* it.
- #
- # Your object can now `pown` that minimalist MVC you got going:
- #  obj.on event, callback, context  - *powned*
- #  obj.off event, callback, context - *powned*
- #  obj.off event, callback          - *powned*
- #  obj.off event                    - *powned*
- #  obj.trigger event, options       - *powned*
- #  obj.set property, value          - *powned*
- #  obj.get property, value          - *powned*
+ A 100 SLOC mangling of the <s>JavaScript</s> eventing system
+ 
+ `pown` your objects using `obj.prototype = Object.create pown`
+ That's right - don't even worry about your constructor - that's
+ some pseudo-classical garbage. You *powned* it.
+ 
+ Your object can now `pown` that minimalist MVC you got going:
+ * obj.on event, callback, context  - *powned*
+ * obj.off event, callback, context - *powned*
+ * obj.off event, callback          - *powned*
+ * obj.off event                    - *powned*
+ * obj.trigger event, options       - *powned*
+ * obj.set property, value          - *powned*
+ * obj.get property, value          - *powned*
 ###
 
 define ->
@@ -70,7 +70,7 @@ define ->
       w: undefined, # why not?
       n: val        # new value
 
-    return @
+    return val
 
   pown.get = (prop) ->
     props = @props or @props = {}

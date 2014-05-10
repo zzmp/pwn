@@ -43,7 +43,7 @@ define(function () {
         var listener = {
           callback: callback,
           context: context || this
-        }
+        };
         for (var i = 0; i < oList.length; i++) {
           if ( oList[i].callback !== listener.callback ||
              !(context === undefined || context === listener.context) ) {
@@ -84,9 +84,9 @@ define(function () {
       o: oVal,      // original value
       w: undefined, // why not?
       n: val        // new value
-    })
+    });
 
-    return this;
+    return val;
   };
 
   pown.get = function (prop) {
