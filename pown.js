@@ -5,18 +5,17 @@
  * `pown` your objects using `obj.prototype = Object.create(pown);`
  * That's right - don't even worry about your constructor - that's
  * some pseudo-classical garbage. You *powned* it.
- *
- * Your object can now `pown` that minimalist MVC you got going:
- *  obj.on(event, callback, context)  - *powned*
- *  obj.off(event, callback, context) - *powned*
- *  obj.off(event, callback)          - *powned*
- *  obj.off(event)                    - *powned*
- *  obj.trigger(event, options)       - *powned*
- *  obj.set(property, value)          - *powned*
- *  obj.get(property, value)          - *powned*
  */
 
-define(function () {
+(function (root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(factory);
+  } else if (typeof exports === 'object') {
+    module.exports = factory();
+  } else {
+    root.pown = factory();
+  }
+}(this, function() {
   // pown that prototype
   var pown = {};
 
@@ -96,5 +95,6 @@ define(function () {
   };
 
   return pown;
-});
+}) );
+
 // 100 SLOC                           - *powned* (MIT License)

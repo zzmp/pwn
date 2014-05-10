@@ -1,0 +1,25 @@
+{
+  "name": "pown",
+  "version": "0.0.0",
+  "description": "A 100 SLOC mangling of the JavaScript eventing system",
+  "main": "pown.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zzmp/pown.git"
+  },
+  "keywords": [
+    "event",
+    "eventing",
+    "pown",
+    "lightweight"
+  ],
+  "author": "Zach Pomerantz <zmp@umich.edu> (http://garabagne.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zzmp/pown/issues"
+  },
+  "homepage": "https://github.com/zzmp/pown"
+}

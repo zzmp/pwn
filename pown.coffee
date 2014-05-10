@@ -5,18 +5,9 @@
  `pown` your objects using `obj.prototype = Object.create pown`
  That's right - don't even worry about your constructor - that's
  some pseudo-classical garbage. You *powned* it.
- 
- Your object can now `pown` that minimalist MVC you got going:
- * obj.on event, callback, context  - *powned*
- * obj.off event, callback, context - *powned*
- * obj.off event, callback          - *powned*
- * obj.off event                    - *powned*
- * obj.trigger event, options       - *powned*
- * obj.set property, value          - *powned*
- * obj.get property, value          - *powned*
 ###
 
-define ->
+factory = ->
   # pown that prototype
   pown = {}
 
@@ -79,4 +70,9 @@ define ->
 
   return pown
 
-# 82 SLOC                            - *powned* (MIT License)
+((root, factory) ->
+  if typeof define is 'function' and define.amd? then define factory 
+  else if typeof exports is 'object' then module.exports = factory()
+  else root.pown = factory()
+)
+# 78 SLOC                            - *powned* (MIT License)
