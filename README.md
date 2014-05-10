@@ -76,4 +76,4 @@ Inspired by [backbone.js](backbonejs.org).
 
 ---
 
-Catch me on [github](github.com/zzmp) or the [interwebs](www.garabagne.io).
+Catch me on [github](http://www.github.com/zzmp) or the [interwebs](http://garabagne.io).
