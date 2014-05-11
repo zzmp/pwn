@@ -76,6 +76,7 @@
   pown.set = function (prop, val) {
     var props = this.props || (this.props = {});
     var oVal = props[prop];
+    if (oVal === val) return val;
 
     props[prop] = val;
     this.trigger('change', {
@@ -96,5 +97,4 @@
 
   return pown;
 }) );
-
 // 100 SLOC                           - *powned* (MIT License)

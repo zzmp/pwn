@@ -53,6 +53,7 @@ factory = ->
   pown.set = (prop, val) ->
     props = @props or @props = {}
     oVal = props[prop]
+    return if oVal is val
 
     props[prop] = val
     this.trigger 'change',
@@ -75,4 +76,4 @@ factory = ->
   else if typeof exports is 'object' then module.exports = factory()
   else root.pown = factory()
 )
-# 78 SLOC                            - *powned* (MIT License)
+# 79 SLOC                            - *powned* (MIT License)
