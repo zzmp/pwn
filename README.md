@@ -1,7 +1,7 @@
 pwn
 ====
 
-A <100 SLOC mangling of the JavaScript eventing system.
+A <100 SLOC mangling of a JavaScript eventing system.
 
 ---
 
@@ -60,10 +60,10 @@ obj.get('frequency') // returns 440
 ```javascript
 //obj.trigger(event, options)
 
-obj.trigger('change', 'p', 'o', 'w', 'n', 'e', 'd');
+obj.trigger('change', 'p', 'w', 'n', 'e', 'd');
 /**
  * Triggers callbacks registered to 'change'
- * as callback(obj, 'p', 'o', 'w', 'n', 'e', 'd');
+ * as callback(obj, 'p', 'w', 'n', 'e', 'd');
  */
 ```
 

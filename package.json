@@ -1,7 +1,7 @@
 {
   "name": "pwn",
-  "version": "0.0.0",
-  "description": "A 100 SLOC mangling of the JavaScript eventing system",
+  "version": "0.0.1",
+  "description": "A <100 SLOC mangling of the JavaScript eventing system",
   "main": "pwn.js",
   "scripts": {
     "make": "coffee -c pwn.litcoffee",

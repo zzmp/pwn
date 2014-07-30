@@ -1,0 +1,27 @@
+{
+  "name": "pwn",
+  "version": "0.0.1",
+  "homepage": "https://github.com/zzmp/pwn",
+  "authors": [
+    "zzmp <zmp@umich.edu>"
+  ],
+  "description": "A <100 line mangling of a JavaScript eventing system",
+  "main": "pwn.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "event",
+    "eventing",
+    "pwn",
+    "lightweight"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test"
+  ]
+}
