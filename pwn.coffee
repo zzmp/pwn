@@ -46,7 +46,7 @@ factory = ->
     list = @_events[event]
  
     for listener in list.slice()
-      listener.callback.apply listener.context, [@].concat options
+      setTimeout (-> listener.callback.apply listener.context, [@].concat options), 0
 
     return @
 
@@ -75,4 +75,4 @@ factory = ->
   else if typeof exports is 'object' then module.exports = factory()
   else root.pwn = factory()
 )
-# 79 SLOC                            - *pwned* (MIT License)
+# 78 SLOC                            - *pwned* (MIT License)
