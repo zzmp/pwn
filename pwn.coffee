@@ -1,17 +1,17 @@
-### (c) 2014 Zach Pomerantz; github.com/zzmp/pown
- # POWN eventing system - now in CoffeeScript!
- A 100 SLOC mangling of the <s>JavaScript</s> eventing system
+### (c) 2014 Zach Pomerantz; github.com/zzmp/pwn
+ # PWN eventing system
+ A 100 SLOC mangling of the JavaScript eventing system
  
- `pown` your objects using `obj.prototype = Object.create pown`
+ `pwn` your objects using `obj.prototype = Object.create pwn`
  That's right - don't even worry about your constructor - that's
- some pseudo-classical garbage. You *powned* it.
+ some pseudo-classical garbage. You *pwned* it.
 ###
 
 factory = ->
-  # pown that prototype
-  pown = {}
+  # pwn that prototype
+  pwn = {}
 
-  pown.on = (event, callback, context) ->
+  pwn.on = (event, callback, context) ->
     listener =
       callback: callback
       context: context or @
@@ -20,7 +20,7 @@ factory = ->
 
     return @
 
-  pown.off = (event, callback, context) ->
+  pwn.off = (event, callback, context) ->
     return @ if not @_events or not @_events[event]
 
     oList = @_events[event]
@@ -40,17 +40,17 @@ factory = ->
 
     return @
 
-  pown.trigger = (event, options...) ->
+  pwn.trigger = (event, options...) ->
     return @ if not this@_events or not @_events[event]
 
     list = @_events[event]
-    
+ 
     for listener in list.slice()
       listener.callback.apply listener.context, [@].concat options
 
     return @
 
-  pown.set = (prop, val) ->
+  pwn.set = (prop, val) ->
     props = @props or @props = {}
     oVal = props[prop]
     return if oVal is val
@@ -58,22 +58,21 @@ factory = ->
     props[prop] = val
     this.trigger 'change',
       p: prop       # property
-      o: oval       # original value
-      w: undefined, # why not?
+      w: wval,      # worn (old) value
       n: val        # new value
 
     return val
 
-  pown.get = (prop) ->
+  pwn.get = (prop) ->
     props = @props or @props = {}
 
     return props[prop]
 
-  return pown
+  return pwn
 
 ((root, factory) ->
   if typeof define is 'function' and define.amd? then define factory 
   else if typeof exports is 'object' then module.exports = factory()
-  else root.pown = factory()
+  else root.pwn = factory()
 )
-# 79 SLOC                            - *powned* (MIT License)
+# 79 SLOC                            - *pwned* (MIT License)

@@ -1,4 +1,4 @@
-pown
+pwn
 ====
 
 A 100 SLOC mangling of the JavaScript eventing system.
@@ -7,9 +7,9 @@ A 100 SLOC mangling of the JavaScript eventing system.
 
 * Delegate to it from your own constructed objects!
 
- `pown` your objects using `obj.prototype = Object.create(pown);`
+ `pwn` your objects using `obj.prototype = Object.create(pwn);`
  That's right - don't even worry about your constructor - that's
- some pseudo-classical garbage. You *powned* it.
+ some pseudo-classical garbage. You *pwned* it.
  
 * Register new event listeners
 
@@ -41,8 +41,7 @@ obj.set('frequency', 440) // returns 440
  * Triggers callbacks registered to 'change'
  * as callback(obj, {
  *   p: property,
- *   o: oldValue,
- *   w: undefined,
+ *   w: wornValue, // (oldValue)
  *   n, value
  * })
  */
