@@ -4,7 +4,7 @@
   "description": "A 100 SLOC mangling of the JavaScript eventing system",
   "main": "pwn.js",
   "scripts": {
-    "make": "coffee -c pwn.coffee",
+    "make": "coffee -c pwn.litcoffee",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
