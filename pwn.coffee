@@ -27,21 +27,21 @@ factory = ->
     list = @_events[event] = []
 
     switch arguments.length
-      when 3, 2 then
+      when 3, 2
         listener =
           callback: callback
           context: context or @
         for oListener in oList
-          list.push oListener if
-            (oList.callback is not listener.callback) or
-            not (not context? or context is listener.context)
-      when 0 then
+          if (oList.callback is not listener.callback) or
+          not (not context? or context is listener.context)
+            list.push oListener
+      when 0
         @_events = {}
 
     return @
 
   pwn.trigger = (event, options...) ->
-    return @ if not this@_events or not @_events[event]
+    return @ if not @_events or not @_events[event]
 
     list = @_events[event]
  
